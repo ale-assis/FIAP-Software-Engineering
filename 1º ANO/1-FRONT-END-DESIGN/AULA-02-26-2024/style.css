@@ -1,0 +1,12 @@
+header{
+    color: white;
+    background-color: blueviolet;
+}
+
+.classe{
+
+}
+
+/* para atacar elementos nao precisa do PONTO no começo */
+/* para atacar classes, começa com o PONTO no começo */
+/* para atacar IDs, começa com uma hashtag */
