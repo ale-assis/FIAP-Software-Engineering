@@ -86,3 +86,5 @@ else:
     print('Polígono NÃO IDENTIFICADO!')
 if forma:
     print(f'O polígono em questão se trada de um {forma} e seu perímetro é de {perimetro}')
+
+FiapaJ8b!
