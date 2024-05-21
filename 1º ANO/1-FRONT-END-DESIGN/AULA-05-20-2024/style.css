@@ -1,0 +1,26 @@
+.cabecalho {
+    background-color: blue;
+    width: 980px;
+    height: 140px;
+}
+
+.sidebar {
+    background-color: blue;
+    width: 270px;
+    height: 450px;
+    
+}
+
+.content {
+    background-color: blue;
+    width: 690px;
+    height: 450px;
+    display: flex;
+}
+
+.footer {
+    background-color: blue;
+    width: 980px;
+    height: 70px;
+    display: flex;
+}
