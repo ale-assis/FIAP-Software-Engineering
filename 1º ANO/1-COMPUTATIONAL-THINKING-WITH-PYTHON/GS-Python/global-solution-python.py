@@ -1,8 +1,8 @@
 # FIAP GLOBAL SOLUTION - COMPUTIIONAL THINKING WITH PYTHON
 # ENGEHARIA DE SOFTWARE - 1º ANO (NOTURNO)
 # ALUNOS:
-# ALEXANDRE ASSIS DO NASCIMENTO - RM:
-# HERBERT DE SOUZA - RM:
+# ALEXANDRE ASSIS DO NASCIMENTO - RM: 558927
+# HERBERT DE SOUZA - RM: 555701
 
 # garantindo que o usuário não digite uma letra
 def checar_letra(opcao):
@@ -30,14 +30,14 @@ def cadastrar_residuos(residuo):
 
 # exibindo menu principal, para usar em diferentes partes do código
 def exibir_menu(menu):
-    menu = input('===============\nSEASCASH MENU\n===============\n1- Cadastro de Resíduos\n2- Verificar SALDO de pontos\n3- Encerrar\n-> ')
+    menu = input('===============\nSEASCASH MENU\n===============\n1- Cadastro de Resíduos\n2- Verificar SALDO de pontos\n-> ')
     menu = checar_letra(menu)
     menu = checar_num(menu)
     menu = int(menu)
     return menu
 
 print('============================')
-print('Bem vindo(a) ao SEASCASH!')
+print('Bem vindo(a) ao SEASCASH - O CashBack dos Mares!\nAqui você vai conseguir descartar seus resíduos e trocar eles por pontos e ganhar recompensas exclusivas e até desconto no IPTU!')
 print('============================')
 print()
 
@@ -58,7 +58,7 @@ while True:
         if escolha_usuario == 1:
             username = input('Digite seu username para fazer login: ')
             if username in lista_usuarios:
-                print('Você está logado :)')
+                print('LOGADO(A) com sucesso!! :)')
 
                 # iniciando menu principal do SEASCASH
                 opcao_menu = ''
@@ -94,23 +94,27 @@ while True:
                         residuo_indice = lista_residuos[i]
                         kilo = lista_kilos[i]
                         if residuo_indice == 'Papel' or residuo_indice == 'papel':
-                            lista_pontos.append(10*kilo)
+                            lista_pontos.append(10 * kilo)
                         elif residuo_indice == 'Metal' or residuo_indice == 'metal':
-                            lista_pontos.append(20*kilo)
+                            lista_pontos.append(20 * kilo)
                         elif residuo_indice == 'Vidro' or residuo_indice == 'vidro':
-                            lista_pontos.append(20*kilo)
+                            lista_pontos.append(20 * kilo)
                         elif residuo_indice == 'Plastico' or residuo_indice == 'plastico':
-                            lista_pontos.append(50*kilo)
+                            lista_pontos.append(50 * kilo)
                     # somando os pontos totais e exibindo ao usuário
                     total_pontos = 0
                     for pontos in lista_pontos:
                         total_pontos += pontos
-                    print(f'Resíduos descartados: {lista_residuos}\nPARABÉNS, {username}, seu Saldo total é de: {total_pontos} pontos!\nConsulte os estabelecimentos parceiros por meio dos seus sites ou pessoalmente para se informar sobre as trocas de pontos por recompensas exclusivas\nAo atingir 250 pontos, você pode utilizar seus pontos para ganhar 10% de desconto no IPTU\nAo atingir 500 pontos, você pode utilizar seus pontos para ganhar 30% de desconto no IPTU\nAo atingir 1000 pontos, você pode utilizar seus pontospara ganhar 80% de desconto no IPTU')
-                    print('Agradecemos pela participação no projeto. Graças a você esses resíduos evitaram de irem parar no o OCEANO!')
+                    print(
+                        f'Resíduos descartados: {lista_residuos}\nPARABÉNS, {username}, seu Saldo total é de: {total_pontos} pontos!\nConsulte os estabelecimentos parceiros por meio dos seus sites ou pessoalmente para se informar sobre as trocas de pontos por recompensas exclusivas\nAo atingir 250 pontos, você pode utilizar seus pontos para ganhar 10% de desconto no IPTU\nAo atingir 500 pontos, você pode utilizar seus pontos para ganhar 30% de desconto no IPTU\nAo atingir 1000 pontos, você pode utilizar seus pontospara ganhar 80% de desconto no IPTU')
+                    print(
+                        'Agradecemos pela participação no projeto. Graças a você esses resíduos evitaram de irem parar no o OCEANO!\n')
+                    print('O programa foi encerrado.')
                     break
             # dando opção ao usuário de criar um nome de usuário, caso ele tente fazer login com nome de usuário inexistente
             else:
-                escolha_usuario = input('Não foi encontrado um usuário com esse nome na nossa base de dados.\nDigite 2 para fazer seu cadastro ou Digite 3 para encerrar.\n-> ')
+                escolha_usuario = input(
+                    'Não foi encontrado um usuário com esse nome na nossa base de dados.\nDigite 2 para fazer seu cadastro.\n-> ')
                 escolha_usuario = int(escolha_usuario)
         # iniciando cadastro de novo usuário no SEASCASH
         if escolha_usuario == 2:
@@ -118,8 +122,7 @@ while True:
             while cadastro_user in lista_usuarios:
                 cadastro_user = input('O nome de usuário digitado JÁ EXISTE. Digite outro\n-> ')
             lista_usuarios.append(cadastro_user)
-            print(f'Cadastro realizado com sucesso.\n {lista_usuarios}\nVocê será redirecionado ao MENU')
-
+            print(f'Cadastro realizado com sucesso!!!\nFaça login para acessar a plataforma do SEASCASH.')
         # garantindo que após o cadastro, o usuário seja levado ao menu principal
         escolha_usuario = 1
     print('O programa será encerrado agora.')
