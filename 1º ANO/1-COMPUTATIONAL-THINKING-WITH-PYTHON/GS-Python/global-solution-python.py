@@ -1,5 +1,5 @@
-# FIAP GLOBAL SOLUTION - COMPUTIIONAL THINKING WITH PYTHON
-# ENGEHARIA DE SOFTWARE - 1º ANO (NOTURNO)
+# FIAP GLOBAL SOLUTION - COMPUTIONAL THINKING WITH PYTHON
+# ENGENHARIA DE SOFTWARE - 1º ANO (NOTURNO)
 # ALUNOS:
 # ALEXANDRE ASSIS DO NASCIMENTO - RM: 558927
 # HERBERT DE SOUZA - RM: 555701
@@ -25,7 +25,7 @@ def checar_num(opcao):
 def cadastrar_residuos(residuo):
     residuo = input(
         '==============\nTABELA DE RESÍDUOS\n==============\nPAPEL: 10 pontos/kg\nMETAL: 20 pontos/kg\nVIDRO: 20 pontos/kg\nPLASTICO: 50 pontos/kg\nCadastre o seu resíduo (Insira o nome corretamente do resíduo que quer cadastrar, 1 por vez).\n-> ')
-    sim_ou_nao = input('Deseja adicionar mais resíduos os carrinho?\nDigite S/s ou N/n\n-> ')
+    sim_ou_nao = input('Deseja cadastrar mais resíduos?\nDigite S/s ou N/n\n-> ')
     return residuo, sim_ou_nao
 
 # exibindo menu principal, para usar em diferentes partes do código
@@ -36,6 +36,7 @@ def exibir_menu(menu):
     menu = int(menu)
     return menu
 
+# mensagem de boas vindas
 print('============================')
 print('Bem vindo(a) ao SEASCASH - O CashBack dos Mares!\nAqui você vai conseguir descartar seus resíduos e trocar eles por pontos e ganhar recompensas exclusivas e até desconto no IPTU!')
 print('============================')
@@ -72,14 +73,14 @@ while True:
 
                     # iniciando cadastro dos resíduos
                     residuo = ''
-                    kilo = int(input(f'Quantos kilos você vai descartar desse resíduo? -> '))
+                    kilo = int(input(f'Opções de Resíduo para Descarte para escolher:\nPapel, Metal, Vidro e Plástico\nQuantos kilos você pretende descartar do resíduo escolhido? -> '))
                     lista_kilos.append(kilo)
                     residuo, sim_ou_nao = cadastrar_residuos(residuo)
                     lista_residuos.append(residuo)
 
                     # perguntando ao usuário se ele quer cadastrar mais resíduos
                     while sim_ou_nao == 'S' or sim_ou_nao == 's':
-                        kilo = int(input(f'Quantos kilos você vai descartar? -> '))
+                        kilo = int(input(f'Opções de Resíduo para Descarte para escolher:\nPapel, Metal, Vidro e Plástico\nQuantos kilos você pretende descartar do resíduo escolhido?-> '))
                         lista_kilos.append(kilo)
                         residuo, sim_ou_nao = cadastrar_residuos(residuo)
                         lista_residuos.append(residuo)
